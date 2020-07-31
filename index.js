@@ -1,12 +1,12 @@
-const { getBranchName } = require('./utils/git-utils');
+const { getBranchName, getCommitMessage, writeToCommitMessage } = require('./utils/git-utils');
 
 const currentBranch = getBranchName();
-const correctBranchNames = new RegExp('fix|feature|hotfix');
+const correctNames = new RegExp('fix|feat|hotfix');
 
-console.log(
-    correctBranchNames.test(currentBranch)
-);
-
-if (!correctBranchNames.test(currentBranch)) {
+if (!correctNames.test(currentBranch)) {
     throw new Error('Branch name is incorrect');
+}
+
+if (!correctNames.test(getCommitMessage())) {
+    writeToCommitMessage(getBranchName(), getCommitMessage())
 }
