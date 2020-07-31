@@ -8,5 +8,5 @@ console.log(
 );
 
 if (!correctBranchNames.test(currentBranch)) {
-    throw new Error('Branch name is incorrect!');
+    throw new Error('Branch name is incorrect');
 }
