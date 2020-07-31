@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "validate-branchname": "node index.js",
-    "pre-commit": "npm run validate-branchname"
+    "pre-commit": "node index.js"
   },
   "repository": {
     "type": "git",
