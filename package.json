@@ -1,0 +1,24 @@
+{
+  "name": "precomit-hooks",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate-branchname": "node index.js",
+    "pre-commit": "npm run validate-branchname"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/humanamburu/precomit-hooks.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/humanamburu/precomit-hooks/issues"
+  },
+  "homepage": "https://github.com/humanamburu/precomit-hooks#readme",
+  "dependencies": {
+    "husky": "^4.2.5"
+  }
+}

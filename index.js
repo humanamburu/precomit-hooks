@@ -1,0 +1,8 @@
+const { getBranchName } = require('./utils/git-utils');
+
+const currentBranch = getBranchName();
+const correctBranchNames = new RegExp('fix|feature|hotfix');
+
+console.log(
+    correctBranchNames.test(currentBranch)
+);

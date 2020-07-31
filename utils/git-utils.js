@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const PATH_TO_GIT = path.join(process.cwd())
+const PATH_TO_GIT = path.join(process.cwd(), '.git')
 
 const getBranchName = () => {
-    return fs.readFileSync('./.git/HEAD', 'utf8');
+    return fs.readFileSync(`${PATH_TO_GIT}/HEAD`, 'utf8').toString().trim();
 }
 
 module.exports = {
